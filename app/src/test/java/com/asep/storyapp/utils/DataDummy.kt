@@ -1,10 +1,8 @@
 package com.asep.storyapp.utils
 
 import com.asep.storyapp.data.datasource.remote.dto.LoginResultDto
-import com.asep.storyapp.data.datasource.remote.dto.StoryDto
 import com.asep.storyapp.data.datasource.remote.response.GeneralResponse
 import com.asep.storyapp.data.datasource.remote.response.LoginResponse
-import com.asep.storyapp.data.datasource.remote.response.StoriesResponse
 import com.asep.storyapp.data.domain.model.Story
 import com.asep.storyapp.data.domain.model.User
 import okhttp3.MultipartBody
@@ -14,9 +12,9 @@ import okhttp3.RequestBody.Companion.toRequestBody
 object DataDummy {
     fun generateDummyLoginResponse(): LoginResponse {
         val loginResultDto = LoginResultDto(
-            name = "Yayan Rahmat Wijaya",
-            userId = "user-yj5pc_LARC_AgK61",
-            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLXlqNXBjX0xBUkNfQWdLNjEiLCJpYXQiOjE2NDE3OTk5NDl9.flEMaQ7zsdYkxuyGbiXjEDXO8kuDTcI__3UjCwt6R_I"
+            name = "asep",
+            userId = "user-0Cule-UOVPfC8qAV",
+            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTBDdWxlLVVPVlBmQzhxQVYiLCJpYXQiOjE2NjgxNzU5OTB9.fVSTZnmZBLauSxiVuPvqgi9B_q0_HmFDBIs__QNRKw8"
         )
 
         return LoginResponse(
@@ -32,11 +30,11 @@ object DataDummy {
         val stories = arrayListOf<Story>()
         for (i in 1..10) {
             val story = Story(
-                id = "story-FvU4u0Vp2S3PMsFg",
-                photoUrl = "https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png",
-                createdAt = "2022-01-08T06:34:18.598Z",
-                name = "Yayan",
-                description = "Lorem Ipsum",
+                id = "story-l1d3xeoSawLT1btR",
+                photoUrl = "https://story-api.dicoding.dev/images/stories/photos-1668176446014_0hGAAXMT.png",
+                createdAt = "2022-11-11T14:20:46.015Z",
+                name = "Guest",
+                description = "coba_abu hammad",
                 lon = null,
                 lat = null
             )
@@ -49,13 +47,13 @@ object DataDummy {
         val stories = arrayListOf<Story>()
         for (i in 1..10) {
             val story = Story(
-                id = "story-FvU4u0Vp2S3PMsFg",
-                photoUrl = "https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png",
-                createdAt = "2022-01-08T06:34:18.598Z",
-                name = "Yayan",
-                description = "Lorem Ipsum",
-                lon = -16.002,
-                lat = -10.212
+                id = "story-l1d3xeoSawLT1btR",
+                photoUrl = "https://story-api.dicoding.dev/images/stories/photos-1668176446014_0hGAAXMT.png",
+                createdAt = "2022-11-11T14:20:46.015Z",
+                name = "Guest",
+                description = "coba_abu hammad",
+                lon = -6.3874567,
+                lat = 106.9391836
             )
             stories.add(story)
         }
@@ -74,9 +72,9 @@ object DataDummy {
 
     fun generateDummyLoggedInUser(): User {
         return User(
-            userId = "user-yj5pc_LARC_AgK61",
-            name = "Yayan Rahmat Wijaya",
-            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLXlqNXBjX0xBUkNfQWdLNjEiLCJpYXQiOjE2NDE3OTk5NDl9.flEMaQ7zsdYkxuyGbiXjEDXO8kuDTcI__3UjCwt6R_I",
+            name = "asep",
+            userId = "user-0Cule-UOVPfC8qAV",
+            token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLTBDdWxlLVVPVlBmQzhxQVYiLCJpYXQiOjE2NjgxNzU5OTB9.fVSTZnmZBLauSxiVuPvqgi9B_q0_HmFDBIs__QNRKw8",
             isLogin = true
         )
     }
@@ -85,57 +83,5 @@ object DataDummy {
         return User(
             "", "", "", false
         )
-    }
-
-    fun generateDummyStoriesResponse(): StoriesResponse {
-        val stories = mutableListOf<StoryDto>()
-        for (i in 1..10) {
-            val storyEntity = StoryDto(
-                id = "story-FvU4u0Vp2S3PMsFg",
-                photoUrl = "https://story-api.dicoding.dev/images/stories/photos-1641623658595_dummy-pic.png",
-                createdAt = "2022-01-08T06:34:18.598Z",
-                name = "Yayan",
-                description = "Lorem Ipsum",
-                lon = -16.002,
-                lat = -10.212
-            )
-            stories.add(storyEntity)
-        }
-        return StoriesResponse(
-            listStory = stories, error = false, message = "success"
-        )
-    }
-
-    fun generateDummyEmptyStoriesResponse(): StoriesResponse {
-        val stories = mutableListOf<StoryDto>()
-        return StoriesResponse(
-            listStory = stories, error = false, message = "success"
-        )
-    }
-
-    fun generateDummyRegisterResponse(isSuccess: Boolean): GeneralResponse {
-        return if (isSuccess) {
-            GeneralResponse(error = false, message = "success")
-        } else {
-            GeneralResponse(error = true, message = "Email already taken")
-        }
-    }
-
-    fun generateDummyLoginResponses(isSuccess: Boolean): LoginResponse {
-        return if (isSuccess) {
-            val loginResultDto = LoginResultDto(
-                name = "Yayan Rahmat Wijaya",
-                userId = "user-yj5pc_LARC_AgK61",
-                token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiJ1c2VyLXlqNXBjX0xBUkNfQWdLNjEiLCJpYXQiOjE2NDE3OTk5NDl9.flEMaQ7zsdYkxuyGbiXjEDXO8kuDTcI__3UjCwt6R_I"
-            )
-
-            LoginResponse(error = false, message = "success", loginResult = loginResultDto)
-        } else {
-            LoginResponse(error = true, message = "Email or Password is incorrect")
-        }
-    }
-
-    fun generateDummyPostStoryResponse(): GeneralResponse {
-        return GeneralResponse(error = false, message = "success")
     }
 }
