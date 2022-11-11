@@ -36,4 +36,13 @@
     <string name="share_location">Share location?</string>
     <string name="go_retry">Retry</string>
     <string name="story_created_by">Story created by:</string>
+    <string name="title_menu_1">Tambahkan Story</string>
+    <string name="desc_menu_1">Kini kamu bisa menambahkan story lewat StoryApp</string>
+    <string name="title_menu_2">Lihat Story</string>
+    <string name="desc_menu_2">Kamu bisa melihat story dan komentar orang lain</string>
+    <string name="title_menu_3">Bagikan Story</string>
+    <string name="desc_menu_3">Unggah story kamu agar orang lain tahu kegiatanmu</string>
+    <string name="title_menu_4">Mulai Sekarang</string>
+    <string name="desc_menu_4">Unggah story pertamamu disini</string>
+    <string name="start">Masuk Aplikasi</string>
 </resources>
