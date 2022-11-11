@@ -6,7 +6,7 @@ import com.asep.storyapp.data.FakeStoryService
 import com.asep.storyapp.data.datasource.local.database.StoryDatabase
 import com.asep.storyapp.data.datasource.local.datastore.UserDataStore
 import com.asep.storyapp.data.datasource.remote.api.StoryService
-import com.asep.storyapp.ui.domain.model.toDomain
+import com.asep.storyapp.data.domain.model.toDomain
 import com.asep.storyapp.util.Result
 import com.asep.storyapp.utils.DataDummy
 import com.asep.storyapp.utils.MainDispatcherRule

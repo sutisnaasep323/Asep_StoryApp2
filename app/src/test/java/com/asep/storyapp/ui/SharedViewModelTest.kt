@@ -3,7 +3,7 @@ package com.asep.storyapp.ui
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import com.asep.storyapp.data.repository.UserRepository
-import com.asep.storyapp.ui.domain.model.User
+import com.asep.storyapp.data.domain.model.User
 import com.asep.storyapp.utils.DataDummy
 import com.asep.storyapp.utils.getOrAwaitValue
 import kotlinx.coroutines.Dispatchers

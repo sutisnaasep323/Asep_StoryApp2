@@ -54,6 +54,7 @@ class MapsFragment : Fragment() {
     private val callback = OnMapReadyCallback { googleMap ->
         mMap = googleMap
         mMap.uiSettings.isZoomControlsEnabled = true
+        mMap.uiSettings.isIndoorLevelPickerEnabled = true
         mMap.uiSettings.isCompassEnabled = true
         mMap.uiSettings.isMapToolbarEnabled = true
 
@@ -91,7 +92,7 @@ class MapsFragment : Fragment() {
             fusedLocationClient.lastLocation.addOnSuccessListener { location ->
                 if (location != null) {
                     val latLng = LatLng(location.latitude, location.longitude)
-                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 8f))
+                    mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 16f))
                 } else {
                     Toast.makeText(
                         requireContext(),

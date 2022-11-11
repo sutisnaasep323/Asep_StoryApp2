@@ -2,24 +2,29 @@ package com.asep.storyapp.ui.login
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.app.ActionBar
+import android.content.res.Resources.Theme
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.Window
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.google.android.material.snackbar.Snackbar
-import com.asep.storyapp.ui.domain.model.toLoggedInUser
+import com.asep.storyapp.data.domain.model.toLoggedInUser
 import com.asep.storyapp.ui.SharedViewModel
 import com.asep.storyapp.ui.ViewModelFactory
 import com.asep.storyapp.util.MIN_PASSWORD_LENGTH
 import com.asep.storyapp.util.Result
 import com.asep.storyapp.R
 import com.asep.storyapp.databinding.FragmentLoginBinding
+import com.asep.storyapp.ui.MainActivity
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null
@@ -35,6 +40,7 @@ class LoginFragment : Fragment() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         Log.d("Current Page", "LoginFragment")
+
     }
 
     override fun onCreateView(
@@ -45,8 +51,25 @@ class LoginFragment : Fragment() {
         return binding.root
     }
 
+    override fun onStart() {
+        super.onStart()
+        (activity as AppCompatActivity).supportActionBar!!.hide()
+    }
+
+    override fun onStop() {
+        super.onStop()
+        (activity as AppCompatActivity).supportActionBar!!.show()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        (activity as AppCompatActivity).supportActionBar!!.hide()
+    }
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        //(activity as AppCompatActivity).supportActionBar!!.hide()
 
         binding.apply {
             lifecycleOwner = viewLifecycleOwner
@@ -136,17 +159,17 @@ class LoginFragment : Fragment() {
     }
 
     private fun playAnimation() {
-        val appName = ObjectAnimator.ofFloat(binding.tvAppName, View.ALPHA, 1f).setDuration(300)
+        val logo = ObjectAnimator.ofFloat(binding.imgLoginLogo, View.ALPHA, 0f, 1f).setDuration(500)
         val loginEmail =
-            ObjectAnimator.ofFloat(binding.loginEmail, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.loginEmail, View.ALPHA, 0f, 1f).setDuration(500)
         val loginPassword =
-            ObjectAnimator.ofFloat(binding.loginPassword, View.ALPHA, 1f).setDuration(300)
-        val btnSignIn = ObjectAnimator.ofFloat(binding.btnSignIn, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.loginPassword, View.ALPHA, 0f, 1f).setDuration(500)
+        val btnSignIn = ObjectAnimator.ofFloat(binding.btnSignIn, View.ALPHA, 0f, 1f).setDuration(500)
         val lnrNotRegistered =
-            ObjectAnimator.ofFloat(binding.lnrNotRegistered, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.lnrNotRegistered, View.ALPHA, 0f, 1f).setDuration(500)
 
         AnimatorSet().apply {
-            playSequentially(appName, loginEmail, loginPassword, btnSignIn, lnrNotRegistered)
+            playSequentially(logo, loginEmail, loginPassword, btnSignIn, lnrNotRegistered)
             start()
         }
     }

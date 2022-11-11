@@ -5,8 +5,8 @@ import com.asep.storyapp.data.datasource.remote.dto.StoryDto
 import com.asep.storyapp.data.datasource.remote.response.GeneralResponse
 import com.asep.storyapp.data.datasource.remote.response.LoginResponse
 import com.asep.storyapp.data.datasource.remote.response.StoriesResponse
-import com.asep.storyapp.ui.domain.model.Story
-import com.asep.storyapp.ui.domain.model.User
+import com.asep.storyapp.data.domain.model.Story
+import com.asep.storyapp.data.domain.model.User
 import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody

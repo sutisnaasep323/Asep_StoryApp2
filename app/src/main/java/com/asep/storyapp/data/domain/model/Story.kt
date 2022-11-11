@@ -1,4 +1,4 @@
-package com.asep.storyapp.ui.domain.model
+package com.asep.storyapp.data.domain.model
 
 import android.os.Parcelable
 import com.asep.storyapp.data.datasource.local.entity.StoryEntity

@@ -3,7 +3,7 @@ package com.asep.storyapp.ui.maps
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import com.asep.storyapp.data.repository.StoryRepository
-import com.asep.storyapp.ui.domain.model.Story
+import com.asep.storyapp.data.domain.model.Story
 import com.asep.storyapp.util.Result
 import com.asep.storyapp.utils.DataDummy
 import com.asep.storyapp.utils.getOrAwaitValue

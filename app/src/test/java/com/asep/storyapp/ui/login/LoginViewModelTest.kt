@@ -3,8 +3,8 @@ package com.asep.storyapp.ui.login
 import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.lifecycle.MutableLiveData
 import com.asep.storyapp.data.repository.UserRepository
-import com.asep.storyapp.ui.domain.model.LoginResult
-import com.asep.storyapp.ui.domain.model.toDomain
+import com.asep.storyapp.data.domain.model.LoginResult
+import com.asep.storyapp.data.domain.model.toDomain
 import com.asep.storyapp.util.Result
 import com.asep.storyapp.utils.DataDummy
 import com.asep.storyapp.utils.getOrAwaitValue

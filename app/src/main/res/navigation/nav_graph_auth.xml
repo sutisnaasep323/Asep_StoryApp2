@@ -38,7 +38,7 @@
         tools:layout="@layout/fragment_story_detail">
         <argument
             android:name="story"
-            app:argType="com.asep.storyapp.ui.domain.model.Story" />
+            app:argType="com.asep.storyapp.data.domain.model.Story" />
     </fragment>
     <activity
         android:id="@+id/storyAddActivity"

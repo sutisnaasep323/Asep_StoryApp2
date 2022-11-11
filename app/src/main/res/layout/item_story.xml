@@ -6,11 +6,12 @@
     <data>
         <variable
             name="Story"
-            type="com.asep.storyapp.ui.domain.model.Story" />
+            type="com.asep.storyapp.data.domain.model.Story" />
     </data>
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/card"
+        app:cardCornerRadius="@dimen/side_margin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/half_side_margin">
@@ -23,17 +24,23 @@
             <ImageView
                 android:id="@+id/iv_item_photo"
                 android:layout_width="match_parent"
-                android:layout_height="194dp"
+                android:layout_height="200dp"
                 android:contentDescription="@string/story_images"
-                android:scaleType="centerCrop"
-                tools:src="@tools:sample/backgrounds/scenic"
+                android:scaleType="fitXY"
+                tools:src="@drawable/logo_story_app"
                 app:imageUrl="@{Story.photoUrl}"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:padding="@dimen/side_margin">
+                android:padding="@dimen/half_side_margin">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:text="@string/story_created_by" />
 
                 <TextView
                     android:id="@+id/tv_item_name"
@@ -41,7 +48,8 @@
                     android:layout_height="wrap_content"
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="@{Story.name}"
-                    tools:text="@tools:sample/cities" />
+                    tools:text="@string/app_name"
+                    app:drawableLeftCompat="@drawable/ic_baseline_person_24" />
 
             </LinearLayout>
 

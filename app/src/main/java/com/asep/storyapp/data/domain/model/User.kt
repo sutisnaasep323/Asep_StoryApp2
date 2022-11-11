@@ -1,4 +1,4 @@
-package com.asep.storyapp.ui.domain.model
+package com.asep.storyapp.data.domain.model
 
 data class User(
     var userId: String,

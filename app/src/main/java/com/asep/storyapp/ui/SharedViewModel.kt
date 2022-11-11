@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.asep.storyapp.data.repository.UserRepository
-import com.asep.storyapp.ui.domain.model.User
+import com.asep.storyapp.data.domain.model.User
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
 

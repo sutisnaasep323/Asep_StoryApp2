@@ -8,8 +8,8 @@ import androidx.paging.PagingData
 import androidx.paging.cachedIn
 import androidx.paging.map
 import com.asep.storyapp.data.repository.StoryRepository
-import com.asep.storyapp.ui.domain.model.Story
-import com.asep.storyapp.ui.domain.model.toDomain
+import com.asep.storyapp.data.domain.model.Story
+import com.asep.storyapp.data.domain.model.toDomain
 
 class HomeViewModel(
     private val storyRepository: StoryRepository

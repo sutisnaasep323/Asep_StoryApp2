@@ -8,8 +8,8 @@ import com.asep.storyapp.data.datasource.local.database.StoryDatabase
 import com.asep.storyapp.data.datasource.local.entity.StoryEntity
 import com.asep.storyapp.data.datasource.remote.api.StoryService
 import com.asep.storyapp.data.datasource.remote.response.GeneralResponse
-import com.asep.storyapp.ui.domain.model.Story
-import com.asep.storyapp.ui.domain.model.toDomain
+import com.asep.storyapp.data.domain.model.Story
+import com.asep.storyapp.data.domain.model.toDomain
 import com.asep.storyapp.util.Result
 import okhttp3.MultipartBody
 import okhttp3.RequestBody

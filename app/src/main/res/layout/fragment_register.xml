@@ -5,7 +5,6 @@
     tools:context="com.asep.storyapp.ui.register.RegisterFragment">
 
     <data>
-
         <variable
             name="viewModel"
             type="com.asep.storyapp.ui.register.RegisterViewModel" />
@@ -44,27 +43,42 @@
                 tools:context=".ui.register.RegisterFragment">
 
                 <TextView
-                    android:id="@+id/tv_app_name"
+                    android:id="@+id/tv_register"
                     style="@style/Widget.StoryApp.TextView.BigTitle"
                     android:layout_marginStart="16dp"
-                    android:layout_marginTop="108dp"
+                    android:layout_marginTop="16dp"
+                    android:textSize="32sp"
+                    android:alpha="1"
                     android:text="@string/register"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    android:alpha="0"/>
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/img_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:alpha="0"
+                    android:contentDescription="@string/description"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/storyapp"
+                    app:layout_constraintBottom_toTopOf="@id/register_name"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_register"
+                    app:layout_constraintVertical_chainStyle="packed" />
+
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/register_name"
                     style="@style/Widget.StoryApp.TextInputLayout.OutlinedBox"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_margin="@dimen/side_margin"
                     android:hint="@string/name"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+                    app:layout_constraintTop_toBottomOf="@+id/img_logo"
                     app:startIconDrawable="@drawable/ic_baseline_person_24"
                     android:alpha="0">
 
@@ -88,7 +102,7 @@
                     app:startIconDrawable="@drawable/ic_baseline_email_24"
                     android:alpha="0">
 
-                    <com.asep.storyapp.ui.customview.EmailEditText
+                    <com.asep.storyapp.customview.EmailEditText
                         android:id="@+id/ed_register_email"
                         style="@style/TextInputEditText"
                         android:inputType="textEmailAddress" />
@@ -109,7 +123,7 @@
                     app:startIconDrawable="@drawable/ic_baseline_lock_24"
                     android:alpha="0">
 
-                    <com.asep.storyapp.ui.customview.PasswordEditText
+                    <com.asep.storyapp.customview.PasswordEditText
                         android:id="@+id/ed_register_password"
                         style="@style/TextInputEditText"
                         android:inputType="textPassword" />
@@ -125,10 +139,12 @@
                     android:layout_marginEnd="16dp"
                     android:onClick="@{() -> registerFragment.register()}"
                     android:text="@string/register_now"
+                    android:backgroundTint="@color/navi"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/register_password"
-                    android:alpha="0" />
+                    android:alpha="0"
+                    android:textColor="@color/white"/>
             </androidx.constraintlayout.widget.ConstraintLayout>
         </ScrollView>
 

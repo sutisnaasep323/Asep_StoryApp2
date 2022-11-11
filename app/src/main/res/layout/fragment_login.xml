@@ -43,32 +43,46 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <TextView
-                    android:id="@+id/tv_app_name"
-                    style="@style/Widget.StoryApp.TextView.BigTitle"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="108dp"
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_app_name"-->
+<!--                    style="@style/Widget.StoryApp.TextView.BigTitle"-->
+<!--                    android:layout_marginStart="16dp"-->
+<!--                    android:layout_marginTop="108dp"-->
+<!--                    android:alpha="0"-->
+<!--                    android:text="@string/app_name"-->
+<!--                    app:layout_constraintEnd_toEndOf="parent"-->
+<!--                    app:layout_constraintHorizontal_bias="0.0"-->
+<!--                    app:layout_constraintStart_toStartOf="parent"-->
+<!--                    app:layout_constraintTop_toTopOf="parent" />-->
+
+                <ImageView
+                    android:id="@+id/img_login_logo"
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:scaleType="centerCrop"
+                    android:contentDescription="@string/description"
+                    android:src="@drawable/storyapp"
+                    android:layout_marginTop="16dp"
                     android:alpha="0"
-                    android:text="@string/app_name"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintHorizontal_bias="0.5"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/login_email"
+                    app:layout_constraintVertical_chainStyle="packed" />
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/login_email"
                     style="@style/Widget.StoryApp.TextInputLayout.OutlinedBox"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="64dp"
-                    android:layout_marginEnd="16dp"
+                    android:layout_margin="@dimen/side_margin"
                     android:alpha="0"
                     android:hint="@string/email"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/tv_app_name"
-                    app:layout_constraintTop_toBottomOf="@+id/tv_app_name"
+                    app:layout_constraintStart_toStartOf="@+id/img_login_logo"
+                    app:layout_constraintTop_toBottomOf="@+id/img_login_logo"
                     app:startIconDrawable="@drawable/ic_baseline_email_24">
 
-                    <com.asep.storyapp.ui.customview.EmailEditText
+                    <com.asep.storyapp.customview.EmailEditText
                         android:id="@+id/ed_login_email"
                         style="@style/TextInputEditText"
                         android:inputType="textEmailAddress" />
@@ -89,7 +103,7 @@
                     app:layout_constraintTop_toBottomOf="@+id/login_email"
                     app:startIconDrawable="@drawable/ic_baseline_lock_24">
 
-                    <com.asep.storyapp.ui.customview.PasswordEditText
+                    <com.asep.storyapp.customview.PasswordEditText
                         android:id="@+id/ed_login_password"
                         style="@style/TextInputEditText"
                         android:inputType="textPassword" />
@@ -106,6 +120,8 @@
                     android:alpha="0"
                     android:onClick="@{() -> loginFragment.signIn()}"
                     android:text="@string/sign_in"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/navi"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/login_password" />

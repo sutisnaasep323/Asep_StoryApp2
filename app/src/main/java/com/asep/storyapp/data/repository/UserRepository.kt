@@ -5,9 +5,9 @@ import androidx.lifecycle.liveData
 import com.asep.storyapp.data.datasource.local.datastore.UserDataStore
 import com.asep.storyapp.data.datasource.remote.api.StoryService
 import com.asep.storyapp.data.datasource.remote.response.GeneralResponse
-import com.asep.storyapp.ui.domain.model.LoginResult
-import com.asep.storyapp.ui.domain.model.User
-import com.asep.storyapp.ui.domain.model.toDomain
+import com.asep.storyapp.data.domain.model.LoginResult
+import com.asep.storyapp.data.domain.model.User
+import com.asep.storyapp.data.domain.model.toDomain
 import com.asep.storyapp.util.Result
 
 class UserRepository(

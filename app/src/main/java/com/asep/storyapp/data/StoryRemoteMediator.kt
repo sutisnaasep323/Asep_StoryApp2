@@ -9,7 +9,7 @@ import com.asep.storyapp.data.datasource.local.database.StoryDatabase
 import com.asep.storyapp.data.datasource.local.entity.RemoteKeysEntity
 import com.asep.storyapp.data.datasource.local.entity.StoryEntity
 import com.asep.storyapp.data.datasource.remote.api.StoryService
-import com.asep.storyapp.ui.domain.model.toEntity
+import com.asep.storyapp.data.domain.model.toEntity
 
 @OptIn(ExperimentalPagingApi::class)
 class StoryRemoteMediator(

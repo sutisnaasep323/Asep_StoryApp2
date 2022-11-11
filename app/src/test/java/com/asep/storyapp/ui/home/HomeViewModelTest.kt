@@ -8,8 +8,8 @@ import androidx.lifecycle.map
 import androidx.paging.*
 import androidx.recyclerview.widget.ListUpdateCallback
 import com.asep.storyapp.data.repository.StoryRepository
-import com.asep.storyapp.ui.domain.model.Story
-import com.asep.storyapp.ui.domain.model.toStoryEntity
+import com.asep.storyapp.data.domain.model.Story
+import com.asep.storyapp.data.domain.model.toStoryEntity
 import com.asep.storyapp.ui.adapter.StoryAdapter
 import com.asep.storyapp.utils.DataDummy
 import com.asep.storyapp.utils.MainDispatcherRule

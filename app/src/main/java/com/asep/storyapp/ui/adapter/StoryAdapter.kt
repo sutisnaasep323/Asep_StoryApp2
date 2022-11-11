@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.paging.PagingDataAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.asep.storyapp.ui.domain.model.Story
+import com.asep.storyapp.data.domain.model.Story
 import com.asep.storyapp.databinding.ItemStoryBinding
 
 class StoryAdapter :

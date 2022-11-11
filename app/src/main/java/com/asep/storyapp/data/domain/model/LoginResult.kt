@@ -1,4 +1,4 @@
-package com.asep.storyapp.ui.domain.model
+package com.asep.storyapp.data.domain.model
 
 import com.asep.storyapp.data.datasource.remote.dto.LoginResultDto
 

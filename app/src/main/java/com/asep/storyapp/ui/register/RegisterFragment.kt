@@ -50,18 +50,18 @@ class RegisterFragment : Fragment() {
     }
 
     private fun playAnimation() {
-        val appName = ObjectAnimator.ofFloat(binding.tvAppName, View.ALPHA, 1f).setDuration(300)
+        val logo = ObjectAnimator.ofFloat(binding.imgLogo, View.ALPHA, 0f, 1f).setDuration(500)
         val registerName =
-            ObjectAnimator.ofFloat(binding.registerName, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.registerName, View.ALPHA, 0f, 1f).setDuration(500)
         val registerEmail =
-            ObjectAnimator.ofFloat(binding.registerEmail, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.registerEmail, View.ALPHA, 0f, 1f).setDuration(500)
         val registerPassword =
-            ObjectAnimator.ofFloat(binding.registerPassword, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.registerPassword, View.ALPHA, 0f, 1f).setDuration(500)
         val btnRegister =
-            ObjectAnimator.ofFloat(binding.btnRegister, View.ALPHA, 1f).setDuration(300)
+            ObjectAnimator.ofFloat(binding.btnRegister, View.ALPHA, 0f, 1f).setDuration(500)
 
         AnimatorSet().apply {
-            playSequentially(appName, registerName, registerEmail, registerPassword, btnRegister)
+            playSequentially(logo, registerName, registerEmail, registerPassword, btnRegister)
             start()
         }
     }
