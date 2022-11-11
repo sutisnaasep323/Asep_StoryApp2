@@ -23,6 +23,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.StoryApp"
         tools:targetApi="31">
+
         <activity
             android:name=".ui.boarding.OnBoardingActivity"
             android:exported="true"
@@ -50,9 +51,7 @@
             android:label="@string/add_new_story" />
         <activity
             android:name=".ui.MainActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
 
     </application>
-
 </manifest>

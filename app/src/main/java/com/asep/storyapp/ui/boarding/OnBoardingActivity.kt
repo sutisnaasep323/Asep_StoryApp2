@@ -3,7 +3,6 @@ package com.asep.storyapp.ui.boarding
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.asep.storyapp.R
 import com.asep.storyapp.databinding.ActivityOnBoardingBinding
 import com.asep.storyapp.ui.MainActivity
 

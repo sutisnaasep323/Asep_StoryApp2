@@ -2,15 +2,12 @@ package com.asep.storyapp.ui.login
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
-import android.app.ActionBar
-import android.content.res.Resources.Theme
 import android.os.Bundle
 import android.util.Log
 import android.util.Patterns
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.Window
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -24,7 +21,6 @@ import com.asep.storyapp.util.MIN_PASSWORD_LENGTH
 import com.asep.storyapp.util.Result
 import com.asep.storyapp.R
 import com.asep.storyapp.databinding.FragmentLoginBinding
-import com.asep.storyapp.ui.MainActivity
 
 class LoginFragment : Fragment() {
     private var _binding: FragmentLoginBinding? = null

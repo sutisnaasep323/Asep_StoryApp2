@@ -1,8 +1,6 @@
 package com.asep.storyapp.ui.home
 
-import android.content.Intent
 import android.os.Bundle
-import android.provider.Settings
 import android.view.*
 import androidx.core.view.MenuHost
 import androidx.core.view.MenuProvider
