@@ -227,10 +227,10 @@ class StoryAddActivity : AppCompatActivity() {
             lat = location?.latitude.toString().toRequestBody("text/plain".toMediaType())
             lon = location?.longitude.toString().toRequestBody("text/plain".toMediaType())
         }
+
         if (formValidation()) {
-            viewModel.uploadImage(
-                token, imageMultipart, description, lat, lon
-            ).observe(this) { result ->
+            viewModel.uploadImage( token, imageMultipart, description, lat, lon)
+                .observe(this) { result ->
                 when (result) {
                     is Result.Loading -> {
                         setLoading(true)
@@ -238,13 +238,14 @@ class StoryAddActivity : AppCompatActivity() {
                     is Result.Success -> {
                         setLoading(false)
                         Snackbar.make(
-                            binding.root, getString(R.string.upload_success), Snackbar.LENGTH_SHORT
-                        ).show()
+                            binding.root, getString(R.string.upload_success), Snackbar.LENGTH_SHORT)
+                            .show()
                         finish()
                     }
                     is Result.Error -> {
                         setLoading(false)
-                        Snackbar.make(binding.root, getString(R.string.oops), Snackbar.LENGTH_SHORT)
+                        Snackbar.make(
+                            binding.root, getString(R.string.oops), Snackbar.LENGTH_SHORT)
                             .show()
                     }
                 }

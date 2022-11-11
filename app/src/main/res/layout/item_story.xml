@@ -24,7 +24,7 @@
             <ImageView
                 android:id="@+id/iv_item_photo"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
+                android:layout_height="250dp"
                 android:contentDescription="@string/story_images"
                 android:scaleType="fitXY"
                 tools:src="@drawable/logo_story_app"
@@ -49,7 +49,7 @@
                     android:textAppearance="?attr/textAppearanceHeadline6"
                     android:text="@{Story.name}"
                     tools:text="@string/app_name"
-                    app:drawableLeftCompat="@drawable/ic_baseline_person_24" />
+                    app:drawableLeftCompat="@drawable/ic_person" />
 
             </LinearLayout>
 

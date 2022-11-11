@@ -18,11 +18,6 @@ import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
 
-/**
- * Written by Yayan Rahmat Wijaya on 10/22/2022 06:28
- * Github : https://github.com/yayanrw
- */
-
 @RunWith(MockitoJUnitRunner::class)
 class StoryAddViewModelTest {
     @get:Rule

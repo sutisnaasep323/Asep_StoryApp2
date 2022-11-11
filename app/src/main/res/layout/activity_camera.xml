@@ -5,7 +5,6 @@
     tools:context=".ui.storyadd.CameraActivity">
 
     <data>
-
         <variable
             name="cameraActivity"
             type="com.asep.storyapp.ui.storyadd.CameraActivity" />
@@ -22,14 +21,14 @@
 
         <ImageView
             android:id="@+id/captureImage"
-            android:layout_width="60dp"
-            android:layout_height="60dp"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_marginBottom="16dp"
             android:contentDescription="@string/story_images"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:srcCompat="@drawable/ic_baseline_photo_camera_24"
+            app:srcCompat="@drawable/ic_photo_camera"
             android:onClick="@{() -> cameraActivity.takePhoto()}"/>
 
         <ImageView
@@ -41,7 +40,7 @@
             android:contentDescription="@string/story_images"
             app:layout_constraintEnd_toEndOf="@+id/viewFinder"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/ic_baseline_cameraswitch_24"
+            app:srcCompat="@drawable/ic_cameraswitch"
             android:onClick="@{() -> cameraActivity.switchCamera()}"/>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -11,11 +11,6 @@ import okhttp3.MultipartBody
 import okhttp3.RequestBody
 import okhttp3.RequestBody.Companion.toRequestBody
 
-/**
-Written by Yayan Rahmat Wijaya on 10/21/2022 05:05
-Github : https://github.com/yayanrw
- **/
-
 object DataDummy {
     fun generateDummyLoginResponse(): LoginResponse {
         val loginResultDto = LoginResultDto(

@@ -15,11 +15,6 @@ import org.mockito.Mock
 import org.mockito.Mockito
 import org.mockito.junit.MockitoJUnitRunner
 
-/**
- * Written by Yayan Rahmat Wijaya on 10/22/2022 07:51
- * Github : https://github.com/yayanrw
- */
-
 @ExperimentalCoroutinesApi
 @RunWith(MockitoJUnitRunner::class)
 class SharedViewModelTest {

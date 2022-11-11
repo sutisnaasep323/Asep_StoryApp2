@@ -14,8 +14,6 @@
 
     <application
         android:allowBackup="true"
-        android:dataExtractionRules="@xml/data_extraction_rules"
-        android:fullBackupContent="@xml/backup_rules"
         android:icon="@drawable/logo_story_app"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -27,7 +25,8 @@
             android:value="AIzaSyAgLnEZLriPld3o1QVVMl5Axo_ZeeoONyk"/>
         <activity
             android:name=".ui.storyadd.CameraActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"/>
         <activity
             android:name=".ui.storyadd.StoryAddActivity"
             android:exported="false"

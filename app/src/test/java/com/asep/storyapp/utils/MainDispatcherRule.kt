@@ -9,11 +9,6 @@ import kotlinx.coroutines.test.setMain
 import org.junit.rules.TestWatcher
 import org.junit.runner.Description
 
-/**
-Written by Yayan Rahmat Wijaya on 10/22/2022 11:01
-Github : https://github.com/yayanrw
- **/
-
 @ExperimentalCoroutinesApi
 class MainDispatcherRule(
     private val testDispatcher: TestDispatcher = UnconfinedTestDispatcher()

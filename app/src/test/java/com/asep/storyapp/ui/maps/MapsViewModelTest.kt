@@ -17,11 +17,6 @@ import org.mockito.Mockito
 import org.mockito.Mockito.`when`
 import org.mockito.junit.MockitoJUnitRunner
 
-/**
- * Written by Yayan Rahmat Wijaya on 10/21/2022 16:20
- * Github : https://github.com/yayanrw
- */
-
 @RunWith(MockitoJUnitRunner::class)
 class MapsViewModelTest {
 
